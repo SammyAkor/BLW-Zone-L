@@ -1,0 +1,51 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: aliceblue;
+    padding-bottom: 10px;
+}
+
+#heading {
+    font-size: 35px;
+}
+
+#form .w3-container {
+    margin-left: 12%;
+    margin-right: 12%;
+}
+
+select {
+    color: rgb(118, 118, 118);
+}
+
+.option {
+    color: black;
+}
+
+label {
+    color: rgb(72, 72, 72);
+}
+
+input[type=date] {
+    color: rgb(72, 72, 72);
+}
+
+.result {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: blue;
+}
+
+
+@media screen and (max-width: 480px) {
+    #form p {
+        font-size: 20px;
+    }
+    #form .w3-container {
+        margin-top: 20px;
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
+    #status p {
+        font-size: 16px;
+    }
+}

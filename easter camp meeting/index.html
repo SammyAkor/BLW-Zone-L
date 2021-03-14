@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLW Zone L Easter Camp Meeting</title>
+    <link rel="stylesheet" href="../extras/w3.css">
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <section id="form">
+        <div class="w3-container">
+            <div id="status" class="w3-margin w3-form-4 w3-center w3-blue w3-animate-opacity" style="visibility: hidden;">
+                <p>Registration was successful</p>
+            </div>
+            <p id="heading" class="w3-center w3-text-blue">BLW Zone L Easter Camp meeting Registration</p>
+            <form method="POST" action="./api.registration.php">
+                <div class="w3-card w3-white" style="padding-bottom: 20px;">
+                    <div class="w3-margin">
+                        <div class="w3-row-padding">
+                            <div class="w3-col s6 w3-margin-top">
+                                <input name="firstname" required class="w3-input" type="text" placeholder="Firstname">
+                            </div>
+                            <div class="w3-col s6 w3-margin-top">
+                                <input name="lastname" required class="w3-input" type="text" placeholder="Lastname">
+                            </div>
+                        </div>
+                        <div class="w3-margin-left w3-margin-right">
+                            <input name="mobile_number" required class="w3-input w3-margin-top" type="text" placeholder="Mobile number">
+                            <input name="email" required class="w3-input w3-margin-top" type="text" placeholder="Email">
+                            <div class="w3-row-padding w3-margin-top">
+                                <label>Gender</label> <br>
+                                <div class="w3-col s6">
+                                    <input required class="w3-radio" type="radio" value="Male" name="gender">
+                                    <label>Male</label>
+                                </div>
+                                <div class="w3-col s6">
+                                    <input required class="w3-radio" type="radio" value="Female" name="gender">
+                                    <label>Female</label>
+                                </div>
+                            </div>
+
+                            <div class="w3-margin-top w3-margin-left">
+                                <label>Date of birth</label> <br>
+                                <input name="date" required type="date" style="margin-top: 10px;">
+                            </div>
+
+                            <input name="department" required class="w3-input w3-margin-top" type="text" placeholder="Department">
+                            <select name="level" required class="w3-select w3-margin-top" style="width: 50%;">
+                                <option value="" disabled selected>Current level</option>
+                                <option class="option" value="100">100 Level</option>
+                                <option class="option" value="200">200 Level</option>
+                                <option class="option" value="300">300 Level</option>
+                                <option class="option" value="400">400 Level</option>
+                                <option class="option" value="500">500 Level</option>
+                                <option class="option" value="600">600 Level</option>
+                            </select>
+                            <input name="skills" required class="w3-input w3-margin-top" type="text" placeholder="Digital Skills">
+                            <select name="group" required class="w3-select w3-margin-top" style="width: 50%;">
+                                <option value="" selected disabled>Group Church</option>
+                                <option class="option" class="option"  value="Unical">Unical Group</option>
+                                <option class="option" value="Crutech">Crutech Group</option>
+                                <option class="option" value="Uniuyo">Uniuyo Group</option>
+                            </select>
+                            <select name="foundation" required class="w3-select w3-margin-top" style="width: 50%;">
+                                <option value="" selected disabled>Foundation</option>
+                                <option class="option" value="Graduate">Graduate</option>
+                                <option class="option" value="On going">On going</option>
+                                <option class="option" value="Not yet">Not yet</option>
+                            </select>
+                            <select name="baptism" required class="w3-select w3-margin-top" style="width: 50%;">
+                                <option value="" selected disabled>Baptism</option>
+                                <option class="option" value="Yes">Yes</option>
+                                <option class="option" value="No">No</option>
+                                <option class="option" value="On going">On going</option>
+                            </select>
+                            <input name="cell" required class="w3-input w3-margin-top" type="text" placeholder="Cell">
+                            <input name="pcf" required class="w3-input w3-margin-top" type="text" placeholder="PCF">
+                            <input name="chapter" required class="w3-input w3-margin-top" type="text" placeholder="Chapter">
+
+                            <div class="w3-margin w3-center">
+                                <input name="submit" class="w3-button w3-blue w3-round" type="submit" value="Submit" style="width: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        let status = document.getElementById('status');
+        
+        const urlParams = new URLSearchParams(window.location.search);
+        let params = urlParams.get('status');
+        if (params == 'success') {
+            status.style.visibility = 'visible';
+            setTimeout(function() {status.style.visibility = 'hidden';}, 2000);
+        }
+
+    </script>
+
+</body>
+
+</html>
